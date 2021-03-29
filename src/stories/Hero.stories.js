@@ -7,4 +7,19 @@ export default {
   component: Hero,
 };
 
-export const usage = () => <Hero />;
+export const usage = () => (
+  <Hero title="Sed voluptate tenetur adipisci exercitationem.">
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+  </Hero>
+);
+
+export const withList = () => (
+  <Hero title="Dolor sit amet consectetur adipisicing elit">
+    <ul>
+      <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+      <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+      <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+    </ul>
+    <button>Dolor sit amet</button>
+  </Hero>
+);

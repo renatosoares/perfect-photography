@@ -11,25 +11,19 @@ export default {
 };
 
 export const usage = () => (
-  <Hero
-    title="Sed voluptate tenetur adipisci exercitationem."
-    image={bgLensImage}
-  >
+  <Hero image={bgLensImage}>
+    <h1>Sed voluptate tenetur adipisci exercitationem.</h1>
     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
   </Hero>
 );
 
 export const withList = () => (
-  <Hero
-    title={
-      <span>
-        Dolor sit amet <strong>consectetur</strong>
-        <br />
-        adipisicing elitit
-      </span>
-    }
-    image={bgBirdImage}
-  >
+  <Hero image={bgBirdImage}>
+    <h1>
+      Dolor sit amet <strong>consectetur</strong>
+      <br />
+      adipisicing elitit
+    </h1>
     <ul>
       <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
       <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>

@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import styled, { css } from "styled-components";
 
 import { breakAt, BreakpointSize } from "./Breakpoints";
@@ -62,5 +63,17 @@ const Hero = ({ image, title, children }) => (
     </Container>
   </Root>
 );
+
+Hero.propTypes = {
+  /**
+   * Image Background
+   */
+  image: PropTypes.string,
+  /**
+   * First title
+   */
+  title: PropTypes.string.isRequired,
+  children: PropTypes.node,
+};
 
 export default Hero;

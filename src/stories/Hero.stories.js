@@ -21,7 +21,13 @@ export const usage = () => (
 
 export const withList = () => (
   <Hero
-    title="Dolor sit amet consectetur adipisicing elitit"
+    title={
+      <span>
+        Dolor sit amet <strong>consectetur</strong>
+        <br />
+        adipisicing elitit
+      </span>
+    }
     image={bgBirdImage}
   >
     <ul>

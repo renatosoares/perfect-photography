@@ -1,6 +1,7 @@
 import React from "react";
 
 import Hero from "../components/Hero";
+import Heading from "../components/Heading";
 
 import bgLensImage from "./assets/bg-lens.jpg";
 import bgBirdImage from "./assets/bg-bird.jpg";
@@ -19,11 +20,13 @@ export const usage = () => (
 
 export const withList = () => (
   <Hero image={bgBirdImage}>
-    <h1>
-      Dolor sit amet <strong>consectetur</strong>
-      <br />
-      adipisicing elitit
-    </h1>
+    <Heading>
+      <h1>
+        Dolor sit amet <strong>consectetur</strong>
+        <br />
+        adipisicing elitit
+      </h1>
+    </Heading>
     <ul>
       <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
       <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>

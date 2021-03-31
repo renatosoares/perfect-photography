@@ -1,4 +1,5 @@
 import React from "react";
+import { text } from "@storybook/addon-knobs";
 
 import Hero from "../components/Hero";
 import Heading from "../components/Heading";
@@ -7,14 +8,19 @@ import bgLensImage from "./assets/bg-lens.jpg";
 import bgBirdImage from "./assets/bg-bird.jpg";
 
 export default {
-  title: "Example/Hero",
+  title: "Components/Hero",
   component: Hero,
 };
 
 export const usage = () => (
   <Hero image={bgLensImage}>
-    <h1>Sed voluptate tenetur adipisci exercitationem.</h1>
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+    <h1>{text("Title", "Sed voluptate tenetur adipisci exercitationem.")} </h1>
+    <p>
+      {text(
+        "Text",
+        "Lorem ipsum, dolor sit amet consectetur adipisicing elit."
+      )}
+    </p>
   </Hero>
 );
 

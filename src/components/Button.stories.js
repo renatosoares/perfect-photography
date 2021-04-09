@@ -71,3 +71,32 @@ export const outlined = () => (
     </Toolbar>
   </div>
 );
+
+export const link = () => (
+  <div>
+    <p>Enabled:</p>
+    <Toolbar>
+      <Button variant="link" {...events}>
+        DEFAULT
+      </Button>
+      <Button variant="link" color="primary" {...events}>
+        PRIMARY
+      </Button>
+      <Button variant="link" color="danger" {...events}>
+        DANGER
+      </Button>
+    </Toolbar>
+    <p>Disabled:</p>
+    <Toolbar>
+      <Button variant="link" disabled {...events}>
+        DEFAULT
+      </Button>
+      <Button variant="link" disabled color="primary" {...events}>
+        PRIMARY
+      </Button>
+      <Button variant="link" disabled color="danger" {...events}>
+        DANGER
+      </Button>
+    </Toolbar>
+  </div>
+);

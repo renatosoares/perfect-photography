@@ -12,9 +12,42 @@ const Root = styled.div`
   }
 `;
 
+const getPrimaryColor = ({ theme }) => theme.colors.primary.main;
+
+const IconRoot = styled.div`
+  display: inline-block;
+  width: 116px;
+  height: 116px;
+  padding: 8px;
+  border-radius: 50%;
+
+  &:hover {
+    border: 1px solid ${getPrimaryColor};
+
+    > * {
+      color: #fff;
+      background-color: ${getPrimaryColor};
+    }
+  }
+`;
+
+const IconContainer = styled.div`
+  border: 1px solid #e9e9e9;
+  border-radius: 50%;
+  font-size: 32px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: ${getPrimaryColor};
+`;
+
 const Feature = ({ icon, title, children }) => (
   <Root>
-    <div>{icon}</div>
+    <IconRoot>
+      <IconContainer>{icon}</IconContainer>
+    </IconRoot>
     <h5>{title}</h5>
     <div>{children}</div>
   </Root>

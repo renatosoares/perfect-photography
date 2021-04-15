@@ -43,7 +43,7 @@ const viewports = {
       height: "1366px",
     },
   },
-  large: {
+  extraLarge: {
     name: "Large Desktop (xl)",
     styles: {
       width: "1280px",

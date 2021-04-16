@@ -22,16 +22,16 @@ export const usage = () => (
 
 export const withGrid = () => (
   <Grid sm={2} md={4}>
-    <Feature icon={<FaChargingStation />} title="Título">
+    <Feature icon={<FaChargingStation />} title="Adipisicing elit, consectetur">
       <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
     </Feature>
-    <Feature icon={<FaCameraRetro />} title="Título">
+    <Feature icon={<FaCameraRetro />} title="Ipsum dolor sit consectetur">
       <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
     </Feature>
-    <Feature icon={<FaImage />} title="Título">
+    <Feature icon={<FaImage />} title="Ipsum dolor">
       <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
     </Feature>
-    <Feature icon={<FaUserClock />} title="Título">
+    <Feature icon={<FaUserClock />} title="Lorem ipsum dolor sit">
       <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
     </Feature>
   </Grid>

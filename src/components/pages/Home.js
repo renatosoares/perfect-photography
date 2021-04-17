@@ -32,7 +32,7 @@ const Home = () => (
         <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
       </ul>
       <Button color="primary" variant="outlined">
-        Dolor sit amet
+        Mostre-se agora
       </Button>
     </Hero>
     <Section>

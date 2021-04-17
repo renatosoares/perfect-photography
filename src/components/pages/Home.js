@@ -15,6 +15,7 @@ import Feature from "components/atoms/Feature";
 import Section from "components/molecules/Section";
 
 import BirdImage from "assets/bg-bird.jpg";
+import CameraVideo from "assets/camera.mp4";
 
 const Home = () => (
   <>
@@ -60,9 +61,24 @@ const Home = () => (
       </Heading>
     </Section>
     <Section>
-      <Heading>
-        <h2>Photography auto click</h2>
-      </Heading>
+      <Grid md={2}>
+        <div>
+          <Heading>
+            <h2>Photography auto click</h2>
+          </Heading>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
+            totam eius autem esse cumque neque vero enim quisquam iure nulla
+            delectus dolore facere, nam labore, ipsam quae omnis amet ad.{" "}
+          </p>
+          <div>
+            <Button color="primary">Saiba mais</Button>
+          </div>
+        </div>
+        <div>
+          <video src={CameraVideo} width="100%" autoPlay loop />
+        </div>
+      </Grid>
     </Section>
     <Section inverse>
       <Heading>

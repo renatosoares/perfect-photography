@@ -17,6 +17,7 @@ const Root = styled.div`
 `;
 
 const Content = styled.div`
+  display: inline-block;
   p,
   li {
     font-size: 20px;

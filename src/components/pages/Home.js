@@ -12,6 +12,7 @@ import Heading from "components/atoms/Heading";
 import Button from "components/atoms/Button";
 import Grid from "components/atoms/Grid";
 import Feature from "components/atoms/Feature";
+import Container from "components/atoms/Container";
 
 import BirdImage from "assets/bg-bird.jpg";
 
@@ -34,23 +35,25 @@ const Home = () => (
         Dolor sit amet
       </Button>
     </Hero>
-    <Grid sm={2} md={4}>
-      <Feature
-        icon={<FaChargingStation />}
-        title="Adipisicing elit, consectetur"
-      >
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-      </Feature>
-      <Feature icon={<FaCameraRetro />} title="Ipsum dolor sit consectetur">
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-      </Feature>
-      <Feature icon={<FaImage />} title="Ipsum dolor">
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-      </Feature>
-      <Feature icon={<FaUserClock />} title="Lorem ipsum dolor sit">
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-      </Feature>
-    </Grid>
+    <Container>
+      <Grid sm={2} md={4}>
+        <Feature
+          icon={<FaChargingStation />}
+          title="Adipisicing elit, consectetur"
+        >
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+        </Feature>
+        <Feature icon={<FaCameraRetro />} title="Ipsum dolor sit consectetur">
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+        </Feature>
+        <Feature icon={<FaImage />} title="Ipsum dolor">
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+        </Feature>
+        <Feature icon={<FaUserClock />} title="Lorem ipsum dolor sit">
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+        </Feature>
+      </Grid>
+    </Container>
   </>
 );
 

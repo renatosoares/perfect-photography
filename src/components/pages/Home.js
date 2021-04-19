@@ -13,6 +13,7 @@ import Button from "components/atoms/Button";
 import Grid from "components/atoms/Grid";
 import Feature from "components/atoms/Feature";
 import Section from "components/molecules/Section";
+import Footer from "components/organisms/Footer";
 
 import BirdImage from "assets/bg-bird.jpg";
 import CameraVideo from "assets/camera.mp4";
@@ -85,6 +86,7 @@ const Home = () => (
         <h2>Dúvidas recorrentes</h2>
       </Heading>
     </Section>
+    <Footer />
   </>
 );
 

@@ -15,6 +15,15 @@ const StyledBody = styled.div`
   }
 `;
 
+const StyledMedia = styled.div`
+  background-image: url(${(props) => props.image});
+  background-position: center center;
+  background-size: cover;
+  height: 270px;
+`;
+
+export const CardMedia = ({ image }) => <StyledMedia image={image} />;
+
 export const CardBody = ({ children }) => <StyledBody>{children}</StyledBody>;
 
 const Card = ({ children }) => (

@@ -24,7 +24,23 @@ const StyledMedia = styled.div`
 
 export const CardMedia = ({ image }) => <StyledMedia image={image} />;
 
+CardMedia.defaultProps = {
+  image: undefined,
+};
+
+CardMedia.propTypes = {
+  image: PropTypes.string,
+};
+
 export const CardBody = ({ children }) => <StyledBody>{children}</StyledBody>;
+
+CardBody.defaultProps = {
+  children: undefined,
+};
+
+CardBody.propTypes = {
+  children: PropTypes.node,
+};
 
 const Card = ({ children }) => (
   <Root>
@@ -33,8 +49,12 @@ const Card = ({ children }) => (
   </Root>
 );
 
-Card.defaultProps = {};
+Card.defaultProps = {
+  children: undefined,
+};
 
-Card.propTypes = {};
+Card.propTypes = {
+  children: PropTypes.node,
+};
 
 export default Card;

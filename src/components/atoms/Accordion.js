@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { MdExpandMore, MdExpandLess } from "react-icons/md";
@@ -13,6 +13,7 @@ const Head = styled.div`
   display: flex;
   align-items: center;
   padding: 16px;
+  cursor: pointer;
 
   & h6 {
     margin: 0;
@@ -28,15 +29,23 @@ const Body = styled.div`
   padding: 0 16px 16px 16px;
 `;
 
-const Accordion = ({ title, children }) => (
-  <Root>
-    <Head>
-      <h6>{title}</h6>
-      <MdExpandMore />
-    </Head>
-    <Body>{children}</Body>
-  </Root>
-);
+const Accordion = ({ title, children }) => {
+  const [open, setOpen] = useState(false);
+
+  const handleClick = () => {
+    setOpen(!open);
+  };
+
+  return (
+    <Root>
+      <Head role="button" onClick={handleClick}>
+        <h6>{title}</h6>
+        {open ? <MdExpandLess /> : <MdExpandMore />}
+      </Head>
+      {open && <Body>{children}</Body>}
+    </Root>
+  );
+};
 
 Accordion.defaultProps = {
   title: undefined,

@@ -14,9 +14,48 @@ import Grid from "components/atoms/Grid";
 import Feature from "components/atoms/Feature";
 import Section from "components/molecules/Section";
 import Footer from "components/organisms/Footer";
+import ProductGrid from "components/organisms/ProductGrid";
 
 import BirdImage from "assets/bg-bird.jpg";
+import ServImage01 from "assets/serv-01.jpg";
+import ServImage02 from "assets/serv-02.jpg";
+import ServImage03 from "assets/serv-03.jpg";
+import ServImage04 from "assets/serv-04.jpg";
+import ServImage05 from "assets/serv-05.jpg";
 import CameraVideo from "assets/camera.mp4";
+
+const products = [
+  {
+    id: 1,
+    title: "1ª photography old cars",
+    summary: "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
+    image: ServImage01,
+  },
+  {
+    id: 2,
+    title: "1ª photography news motorcycles",
+    summary: "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
+    image: ServImage02,
+  },
+  {
+    id: 3,
+    title: "1ª photography flowers",
+    summary: "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
+    image: ServImage03,
+  },
+  {
+    id: 4,
+    title: "Switch to professional equipment",
+    summary: "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
+    image: ServImage04,
+  },
+  {
+    id: 5,
+    title: "Studio environment",
+    summary: "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
+    image: ServImage05,
+  },
+];
 
 const Home = () => (
   <>
@@ -60,6 +99,7 @@ const Home = () => (
       <Heading>
         <h2>Conheça nossos serviços</h2>
       </Heading>
+      <ProductGrid products={products} />
     </Section>
     <Section>
       <Grid md={2}>

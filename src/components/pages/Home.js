@@ -16,6 +16,7 @@ import Section from "components/molecules/Section";
 import Footer from "components/organisms/Footer";
 import ProductGrid from "components/organisms/ProductGrid";
 import Accordion from "components/atoms/Accordion";
+import AccordionGroup from "components/atoms/AccordionGroup";
 
 import BirdImage from "assets/bg-bird.jpg";
 import ServImage01 from "assets/serv-01.jpg";
@@ -126,21 +127,26 @@ const Home = () => (
       <Heading>
         <h2>Dúvidas recorrentes</h2>
       </Heading>
-      <Accordion title="How do I use flash during the day?">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores, sunt.
-        Tempora cumque provident et unde maxime nam, deserunt iusto corporis,
-        porro obcaecati neque, nulla reprehenderit quaerat quia nostrum ipsa at!
-      </Accordion>
-      <Accordion title="What is the best portrait lens?">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores, sunt.
-        Tempora cumque provident et unde maxime nam, deserunt iusto corporis,
-        porro obcaecati neque, nulla reprehenderit quaerat quia nostrum ipsa at!
-      </Accordion>
-      <Accordion title="Transporting machinery how do I do it?">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores, sunt.
-        Tempora cumque provident et unde maxime nam, deserunt iusto corporis,
-        porro obcaecati neque, nulla reprehenderit quaerat quia nostrum ipsa at!
-      </Accordion>
+      <AccordionGroup>
+        <Accordion title="How do I use flash during the day?">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores,
+          sunt. Tempora cumque provident et unde maxime nam, deserunt iusto
+          corporis, porro obcaecati neque, nulla reprehenderit quaerat quia
+          nostrum ipsa at!
+        </Accordion>
+        <Accordion title="What is the best portrait lens?">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores,
+          sunt. Tempora cumque provident et unde maxime nam, deserunt iusto
+          corporis, porro obcaecati neque, nulla reprehenderit quaerat quia
+          nostrum ipsa at!
+        </Accordion>
+        <Accordion title="Transporting machinery how do I do it?">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores,
+          sunt. Tempora cumque provident et unde maxime nam, deserunt iusto
+          corporis, porro obcaecati neque, nulla reprehenderit quaerat quia
+          nostrum ipsa at!
+        </Accordion>
+      </AccordionGroup>
     </Section>
     <Footer />
   </>

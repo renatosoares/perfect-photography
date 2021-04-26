@@ -4,23 +4,55 @@ import { render, screen } from "test-utils";
 
 import Accordion from "./Accordion";
 
-test("renders the title", () => {
-  const title = "My Title";
+const text = "My children text";
+const title = "My Title";
+
+test("renders with title", () => {
   render(<Accordion title={title}></Accordion>);
   expect(screen.queryByText(title)).toBeInTheDocument();
 });
 
 test("renders without children", () => {
-  const text = "My children text";
   render(<Accordion>{text}</Accordion>);
   expect(screen.queryByText(text)).not.toBeInTheDocument();
 });
 
 test("triggers onChange when it is clicked", async () => {
-  const title = "My Title";
   const handleChange = jest.fn();
   render(<Accordion title={title} onChange={handleChange}></Accordion>);
   await fireEvent.click(screen.getByText(title));
 
   expect(handleChange).toBeCalledTimes(1);
+});
+
+describe("when is controlled", () => {
+  describe("when starts opened", () => {
+    test("renders with children", () => {
+      render(<Accordion open>{text}</Accordion>);
+      expect(screen.queryByText(text)).toBeInTheDocument();
+    });
+
+    test("hide children on click", () => {
+      const { rerender } = render(
+        <Accordion title={title} open>
+          {text}
+        </Accordion>
+      );
+
+      rerender(
+        <Accordion title={title} open={false}>
+          {text}
+        </Accordion>
+      );
+
+      expect(screen.queryByText(text)).not.toBeInTheDocument();
+    });
+  });
+});
+
+describe("when starts closed", () => {
+  test("renders without children", () => {
+    render(<Accordion open={false}>{text}</Accordion>);
+    expect(screen.queryByText(text)).not.toBeInTheDocument();
+  });
 });

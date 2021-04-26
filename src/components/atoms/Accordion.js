@@ -73,7 +73,7 @@ Accordion.defaultProps = {
   title: undefined,
   children: undefined,
   open: undefined,
-  onChange: undefined,
+  onChange: () => {},
 };
 
 Accordion.propTypes = {

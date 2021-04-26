@@ -32,7 +32,16 @@ describe("when is controlled", () => {
       expect(screen.queryByText(text)).toBeInTheDocument();
     });
 
-    test("hide children on click", () => {
+    test("triggers onChange when it is clicked", async () => {
+      const handleChange = jest.fn();
+      render(<Accordion title={title} onChange={handleChange} open />);
+
+      await fireEvent.click(screen.getByText(title));
+
+      expect(handleChange).toBeCalledTimes(1);
+    });
+
+    test("hide children when open changes to false", () => {
       const { rerender } = render(
         <Accordion title={title} open>
           {text}
@@ -46,6 +55,12 @@ describe("when is controlled", () => {
       );
 
       expect(screen.queryByText(text)).not.toBeInTheDocument();
+    });
+
+    test("call default function when it is clicked", async () => {
+      render(<Accordion title={title} open />);
+
+      await fireEvent.click(screen.getByText(title));
     });
   });
 });

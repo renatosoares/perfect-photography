@@ -15,8 +15,7 @@ import Feature from "components/atoms/Feature";
 import Section from "components/molecules/Section";
 import Footer from "components/organisms/Footer";
 import ProductGrid from "components/organisms/ProductGrid";
-import Accordion from "components/atoms/Accordion";
-import AccordionGroup from "components/atoms/AccordionGroup";
+import Accordion, { AccordionGroup } from "components/atoms/Accordion";
 
 import BirdImage from "assets/bg-bird.jpg";
 import ServImage01 from "assets/serv-01.jpg";

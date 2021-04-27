@@ -2,7 +2,7 @@ import { fireEvent } from "@testing-library/dom";
 import React from "react";
 import { render, screen } from "test-utils";
 
-import Accordion from "./Accordion";
+import Accordion from "../Accordion";
 
 const text = "My children text";
 const title = "My Title";

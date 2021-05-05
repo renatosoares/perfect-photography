@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react";
 
-import { Header } from './Header';
+import { Header } from "./Header";
 
-export default {
-  title: 'Example/Header',
+const HeaderStory = {
+  title: "Example/Header",
   component: Header,
 };
 
@@ -16,3 +16,5 @@ LoggedIn.args = {
 
 export const LoggedOut = Template.bind({});
 LoggedOut.args = {};
+
+export default HeaderStory;

@@ -17,8 +17,21 @@ jobs:
       - run: yarn cover
       - codecov/upload:
           file: coverage/*.json
-
+  versioning:
+    docker:
+      - image: circleci/node:12.19.0
+    steps:
+      - checkout
+      - run:
+          name: Check package version
+          command: node scripts/check-version renatosoares perfect-photography
 workflows:
   ci:
     jobs:
       - tests
+      - versioning:
+          filters:
+            branches:
+              ignore: master
+            tags:
+              ignore: /.*/

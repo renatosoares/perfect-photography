@@ -1,6 +1,6 @@
 {
   "name": "perfect-photography",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "private": true,
   "dependencies": {
     "@storybook/addon-docs": "^6.2.9",

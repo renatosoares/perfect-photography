@@ -16,6 +16,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased](https://github.com/renatosoares/perfect-photography/commits/Unreleased) - 2021-00-00
 
+## [0.2.1](https://github.com/renatosoares/perfect-photography/commits/0.2.1) - 2021-05-08
+
+### Changed
+
+- Improvements to continuous integration settings.
+
 ## [0.2.0](https://github.com/renatosoares/perfect-photography/commits/0.2.0) - 2021-05-06
 
 ### Added

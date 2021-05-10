@@ -6,8 +6,9 @@ import Hero from "components/molecules/Hero";
 import Heading from "components/atoms/Heading";
 import Section from "components/molecules/Section";
 import Grid from "components/atoms/Grid";
-import AboutImage from "draws/About";
+import Footer from "components/organisms/Footer";
 
+import AboutImage from "draws/About";
 import BirdImage from "assets/bg-bird.jpg";
 
 const ImageContainer = styled.div`
@@ -102,6 +103,12 @@ const About = () => (
         </div>
       </Grid>
     </Section>
+    <Section>
+      <Heading>
+        <h2>Meet our photographers</h2>
+      </Heading>
+    </Section>
+    <Footer />
   </>
 );
 

@@ -80,6 +80,28 @@ const About = () => (
         </div>
       </Grid>
     </Section>
+    <Section inverse>
+      <Grid md={2}>
+        <div>
+          <h4>Mission</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
+            autem aspernatur quod eum, rem quam, fuga labore, sapiente
+            perspiciatis quasi est saepe! Dolor sequi, quaerat facere ratione
+            cupiditate dolore culpa.
+          </p>
+        </div>
+        <div>
+          <h4>Vision</h4>
+          <p>
+            Reiciendis eius similique quaerat, delectus enim facere placeat
+            voluptatum ullam saepe alias obcaecati aut nobis? Eius nihil atque
+            perspiciatis possimus magnam nisi repudiandae tenetur. Voluptate
+            aliquid molestiae error impedit culpa.
+          </p>
+        </div>
+      </Grid>
+    </Section>
   </>
 );
 

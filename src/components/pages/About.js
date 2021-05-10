@@ -6,13 +6,17 @@ import Hero from "components/molecules/Hero";
 import Heading from "components/atoms/Heading";
 import Section from "components/molecules/Section";
 import Grid from "components/atoms/Grid";
-import AboutImage from "draws/about.svg";
+import AboutImage from "draws/About";
 
 import BirdImage from "assets/bg-bird.jpg";
 
-const Image = styled.img`
-  width: 100%;
-  max-width: 380px;
+const ImageContainer = styled.div`
+  svg {
+    width: 100%;
+    height: auto;
+    max-width: 380px;
+    color: ${(props) => props.theme.colors.primary.main};
+  }
 `;
 
 const About = () => (
@@ -69,7 +73,9 @@ const About = () => (
             nam asperiores. Sed nam repellendus consequatur.
           </p>
           <center>
-            <Image src={aboutImage} alt="Image camera and photos" />
+            <ImageContainer>
+              <AboutImage />
+            </ImageContainer>
           </center>
         </div>
       </Grid>

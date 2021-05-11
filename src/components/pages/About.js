@@ -7,9 +7,16 @@ import Heading from "components/atoms/Heading";
 import Section from "components/molecules/Section";
 import Grid from "components/atoms/Grid";
 import Footer from "components/organisms/Footer";
+import Card, { CardMedia, CardMediaDescription } from "components/atoms/Card";
 
 import AboutImage from "draws/About";
 import BirdImage from "assets/bg-bird.jpg";
+import photographerImage1 from "assets/photographers/photographer-01.png";
+import photographerImage2 from "assets/photographers/photographer-02.png";
+import photographerImage3 from "assets/photographers/photographer-03.png";
+import photographerImage4 from "assets/photographers/photographer-04.png";
+import photographerImage5 from "assets/photographers/photographer-05.png";
+import photographerImage6 from "assets/photographers/photographer-06.png";
 
 const ImageContainer = styled.div`
   svg {
@@ -19,6 +26,39 @@ const ImageContainer = styled.div`
     color: ${(props) => props.theme.colors.primary.main};
   }
 `;
+
+const photographers = [
+  {
+    id: 1,
+    name: "Stott",
+    avatar: photographerImage1,
+  },
+  {
+    id: 2,
+    name: "John",
+    avatar: photographerImage2,
+  },
+  {
+    id: 3,
+    name: "Piper",
+    avatar: photographerImage3,
+  },
+  {
+    id: 4,
+    name: "Washer",
+    avatar: photographerImage4,
+  },
+  {
+    id: 5,
+    name: "Bunyan",
+    avatar: photographerImage5,
+  },
+  {
+    id: 6,
+    name: "Spurgeon",
+    avatar: photographerImage6,
+  },
+];
 
 const About = () => (
   <>
@@ -107,6 +147,17 @@ const About = () => (
       <Heading>
         <h2>Meet our photographers</h2>
       </Heading>
+      <Grid sm={2} md={3} lg={4}>
+        {photographers.map((photographer) => (
+          <Card key={photographer.id}>
+            <CardMedia image={photographer.avatar}>
+              <CardMediaDescription>
+                <h5>{photographer.name}</h5>
+              </CardMediaDescription>
+            </CardMedia>
+          </Card>
+        ))}
+      </Grid>
     </Section>
     <Footer />
   </>

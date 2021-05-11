@@ -10,7 +10,7 @@ import CupFlowerImage from "stories/assets/cup-flower.jpg";
 export default {
   title: "Components/Atoms/Card",
   component: Card,
-  subcomponents: { CardBody, CardMedia },
+  subcomponents: { CardBody, CardMedia, CardMediaDescription },
 };
 
 export const usage = () => (

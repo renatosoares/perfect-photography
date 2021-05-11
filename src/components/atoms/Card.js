@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
-//#region CardMedia
+//#region CardMediaBody
 
 const StyledBody = styled.div`
   padding: 16px;
@@ -77,9 +77,9 @@ CardMediaDescription.defaultProps = {
 };
 
 CardMediaDescription.propTypes = {
-  image: PropTypes.node,
+  children: PropTypes.node,
 };
-//#region
+//#endregion
 
 //#region Card
 

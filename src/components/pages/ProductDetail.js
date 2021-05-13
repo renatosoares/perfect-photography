@@ -1,10 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
+import styled from "styled-components";
+import { FaIdCard, FaHome, FaScroll } from "react-icons/fa";
 
 import Hero from "components/molecules/Hero";
 import Heading from "components/atoms/Heading";
 import Section from "components/molecules/Section";
-import Grid from "components/atoms/Grid";
 import Footer from "components/organisms/Footer";
 import Callout, {
   CalloutBody,
@@ -15,6 +16,24 @@ import Button from "components/atoms/Button";
 
 import BirdImage from "assets/bg-bird.jpg";
 import TeachingImage from "draws/Teaching";
+
+const PinnedList = styled.ul`
+  list-style: none;
+  padding-left: 0;
+`;
+
+const PinnedItem = styled.li`
+  display: inline-block;
+  border: 1px solid ${(props) => props.theme.colors.border};
+  border-radius: 4px;
+  padding: 8px 16px;
+  margin: 0 16px 16px 0;
+
+  svg {
+    margin-right: 8px;
+    vertical-align: middle;
+  }
+`;
 
 const ProductDetail = () => (
   <>
@@ -43,6 +62,24 @@ const ProductDetail = () => (
         beatae repellendus.
       </p>
       <h5>Necessary documents:</h5>
+      <PinnedList>
+        <PinnedItem>
+          <FaIdCard />
+          Lorem ipsum
+        </PinnedItem>
+        <PinnedItem>
+          <FaIdCard />
+          Amet consectetur
+        </PinnedItem>
+        <PinnedItem>
+          <FaScroll />
+          Numquam dignissimos sequi
+        </PinnedItem>
+        <PinnedItem>
+          <FaHome />
+          perspiciatis porro
+        </PinnedItem>
+      </PinnedList>
     </Section>
     <Section inverse>
       <Callout>

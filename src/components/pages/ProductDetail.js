@@ -1,0 +1,74 @@
+import React from "react";
+import PropTypes from "prop-types";
+
+import Hero from "components/molecules/Hero";
+import Heading from "components/atoms/Heading";
+import Section from "components/molecules/Section";
+import Grid from "components/atoms/Grid";
+import Footer from "components/organisms/Footer";
+import Callout, {
+  CalloutBody,
+  CalloutActions,
+  CalloutMedia,
+} from "components/atoms/Callout";
+import Button from "components/atoms/Button";
+
+import BirdImage from "assets/bg-bird.jpg";
+import TeachingImage from "draws/Teaching";
+
+const ProductDetail = () => (
+  <>
+    <Hero image={BirdImage}>
+      <Heading>
+        <h1>Service name</h1>
+      </Heading>
+    </Hero>
+    <Section>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis
+        dicta veniam, iure ipsum architecto ipsam facilis dolore provident optio
+        commodi, porro enim cum, recusandae nisi laboriosam esse expedita nam
+        cupiditate?
+      </p>
+      <p>
+        Eum deserunt magnam quidem tenetur quod! Dolorum itaque neque ut
+        consectetur, ipsum tempora ea odit quibusdam natus nulla accusamus quo,
+        aliquam asperiores qui id laborum? Voluptas totam exercitationem esse
+        voluptatum.
+      </p>
+      <p>
+        Repudiandae eum, beatae non earum dolores doloremque, fugit unde quos
+        consequuntur atque sequi eligendi distinctio nobis! Commodi, enim,
+        expedita, nulla similique sed aliquid maiores saepe nisi facilis odit
+        beatae repellendus.
+      </p>
+      <h5>Necessary documents:</h5>
+    </Section>
+    <Section inverse>
+      <Callout>
+        <CalloutBody>
+          <h6>Make your registration right now!</h6>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe
+            animi numquam dignissimos sequi ex accusantium magnam voluptatum
+            deserunt pariatur iusto cum delectus, enim unde cupiditate
+            perspiciatis porro amet, facere nemo.
+          </p>
+          <CalloutActions>
+            <Button color="primary">Matriculate</Button>
+          </CalloutActions>
+        </CalloutBody>
+        <CalloutMedia>
+          <TeachingImage />
+        </CalloutMedia>
+      </Callout>
+    </Section>
+    <Footer />
+  </>
+);
+
+ProductDetail.defaultProps = {};
+
+ProductDetail.propTypes = {};
+
+export default ProductDetail;

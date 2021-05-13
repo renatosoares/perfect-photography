@@ -2,6 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
+import { breakAt, BreakpointSizes } from "styles/Breakpoints";
+
 //#region CalloutBody
 const StyledCalloutBody = styled.div`
   flex: 1;
@@ -74,6 +76,11 @@ export default Callout;
 
 const StyledCalloutMedia = styled.div`
   width: 30%;
+  display: none;
+
+  ${breakAt(BreakpointSizes.md)} {
+    display: flex;
+  }
 
   svg {
     color: ${(props) => props.theme.colors.primary.main};

@@ -6,6 +6,7 @@ import {
   FaImage,
   FaUserClock,
 } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 import Hero from "components/molecules/Hero";
 import Heading from "components/atoms/Heading";
@@ -114,7 +115,9 @@ const Home = () => (
             delectus dolore facere, nam labore, ipsam quae omnis amet ad.{" "}
           </p>
           <div>
-            <Button color="primary">Saiba mais</Button>
+            <Button as={Link} to="/about" color="primary">
+              Know more
+            </Button>
           </div>
         </div>
         <div>

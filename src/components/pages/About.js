@@ -1,6 +1,8 @@
-import React, { useEffect } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
+
+import { useScrollToTop } from "hooks/scroll";
 
 import Hero from "components/molecules/Hero";
 import Heading from "components/atoms/Heading";
@@ -62,13 +64,7 @@ const photographers = [
 ];
 
 const About = () => {
-  useEffect(() => {
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: "smooth",
-    });
-  }, []);
+  useScrollToTop();
 
   return (
     <>

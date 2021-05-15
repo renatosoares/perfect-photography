@@ -8,6 +8,7 @@ import Section from "components/molecules/Section";
 import Grid from "components/atoms/Grid";
 import Footer from "components/organisms/Footer";
 import Card, { CardMedia, CardMediaDescription } from "components/atoms/Card";
+import BreadCrumb from "components/atoms/BreadCrumb";
 
 import AboutImage from "draws/About";
 import BirdImage from "assets/bg-bird.jpg";
@@ -75,6 +76,9 @@ const About = () => {
         <Heading>
           <h1>Perfect Photography</h1>
         </Heading>
+        <BreadCrumb
+          items={[{ label: "Home", link: "/" }, { label: "About" }]}
+        />
       </Hero>
       <Section>
         <Grid md={2}>

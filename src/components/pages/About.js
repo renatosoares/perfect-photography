@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
@@ -60,108 +60,119 @@ const photographers = [
   },
 ];
 
-const About = () => (
-  <>
-    <Hero image={BirdImage}>
-      <Heading>
-        <h1>Perfect Photography</h1>
-      </Heading>
-    </Hero>
-    <Section>
-      <Grid md={2}>
-        <div>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum
-            molestiae modi veniam, provident numquam facilis quia rerum!
-            Veritatis explicabo ullam architecto laudantium, rerum assumenda cum
-            expedita maxime aspernatur non totam.
-          </p>
-          <p>
-            Dolorem officiis dicta ducimus sed ipsam, unde recusandae. Dolores
-            illo, aliquid qui delectus ipsum quae unde ab ipsa blanditiis nihil,
-            quia, maxime voluptas nesciunt asperiores voluptates cupiditate ea
-            reprehenderit in?
-          </p>
-          <p>
-            Animi harum in perferendis eius error odit. Ipsam ea deserunt
-            reiciendis voluptas dignissimos dolores voluptate libero aut eveniet
-            at necessitatibus, rerum, nobis natus consequuntur velit. Voluptatum
-            tempore ipsam nostrum autem?
-          </p>
-          <ul>
-            <li>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
-            </li>
-            <li>
-              Incidunt libero dolorum quaerat obcaecati eius dicta ducimus
-            </li>
-            <li>
-              Minima provident facilis omnis delectus quis nulla doloremque
-            </li>
-            <li>
-              Accusantium doloremque aperiam eveniet, a mollitia iure ipsum
-            </li>
-            <li>
-              Provident sed adipisci, impedit necessitatibus libero, neque odit
-            </li>
-          </ul>
-        </div>
-        <div>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            Consequuntur quisquam architecto commodi tempore minus. Quod
-            voluptatum unde ullam cumque voluptatibus esse magnam aliquid illum
-            nam asperiores. Sed nam repellendus consequatur.
-          </p>
-          <center>
-            <ImageContainer>
-              <AboutImage />
-            </ImageContainer>
-          </center>
-        </div>
-      </Grid>
-    </Section>
-    <Section inverse>
-      <Grid md={2}>
-        <div>
-          <h4>Mission</h4>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
-            autem aspernatur quod eum, rem quam, fuga labore, sapiente
-            perspiciatis quasi est saepe! Dolor sequi, quaerat facere ratione
-            cupiditate dolore culpa.
-          </p>
-        </div>
-        <div>
-          <h4>Vision</h4>
-          <p>
-            Reiciendis eius similique quaerat, delectus enim facere placeat
-            voluptatum ullam saepe alias obcaecati aut nobis? Eius nihil atque
-            perspiciatis possimus magnam nisi repudiandae tenetur. Voluptate
-            aliquid molestiae error impedit culpa.
-          </p>
-        </div>
-      </Grid>
-    </Section>
-    <Section>
-      <Heading>
-        <h2>Meet our photographers</h2>
-      </Heading>
-      <Grid sm={2} md={3} lg={4}>
-        {photographers.map((photographer) => (
-          <Card key={photographer.id}>
-            <CardMedia image={photographer.avatar}>
-              <CardMediaDescription>
-                <h5>{photographer.name}</h5>
-              </CardMediaDescription>
-            </CardMedia>
-          </Card>
-        ))}
-      </Grid>
-    </Section>
-    <Footer />
-  </>
-);
+const About = () => {
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+  }, []);
+
+  return (
+    <>
+      <Hero image={BirdImage}>
+        <Heading>
+          <h1>Perfect Photography</h1>
+        </Heading>
+      </Hero>
+      <Section>
+        <Grid md={2}>
+          <div>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum
+              molestiae modi veniam, provident numquam facilis quia rerum!
+              Veritatis explicabo ullam architecto laudantium, rerum assumenda
+              cum expedita maxime aspernatur non totam.
+            </p>
+            <p>
+              Dolorem officiis dicta ducimus sed ipsam, unde recusandae. Dolores
+              illo, aliquid qui delectus ipsum quae unde ab ipsa blanditiis
+              nihil, quia, maxime voluptas nesciunt asperiores voluptates
+              cupiditate ea reprehenderit in?
+            </p>
+            <p>
+              Animi harum in perferendis eius error odit. Ipsam ea deserunt
+              reiciendis voluptas dignissimos dolores voluptate libero aut
+              eveniet at necessitatibus, rerum, nobis natus consequuntur velit.
+              Voluptatum tempore ipsam nostrum autem?
+            </p>
+            <ul>
+              <li>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
+              </li>
+              <li>
+                Incidunt libero dolorum quaerat obcaecati eius dicta ducimus
+              </li>
+              <li>
+                Minima provident facilis omnis delectus quis nulla doloremque
+              </li>
+              <li>
+                Accusantium doloremque aperiam eveniet, a mollitia iure ipsum
+              </li>
+              <li>
+                Provident sed adipisci, impedit necessitatibus libero, neque
+                odit
+              </li>
+            </ul>
+          </div>
+          <div>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Consequuntur quisquam architecto commodi tempore minus. Quod
+              voluptatum unde ullam cumque voluptatibus esse magnam aliquid
+              illum nam asperiores. Sed nam repellendus consequatur.
+            </p>
+            <center>
+              <ImageContainer>
+                <AboutImage />
+              </ImageContainer>
+            </center>
+          </div>
+        </Grid>
+      </Section>
+      <Section inverse>
+        <Grid md={2}>
+          <div>
+            <h4>Mission</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
+              autem aspernatur quod eum, rem quam, fuga labore, sapiente
+              perspiciatis quasi est saepe! Dolor sequi, quaerat facere ratione
+              cupiditate dolore culpa.
+            </p>
+          </div>
+          <div>
+            <h4>Vision</h4>
+            <p>
+              Reiciendis eius similique quaerat, delectus enim facere placeat
+              voluptatum ullam saepe alias obcaecati aut nobis? Eius nihil atque
+              perspiciatis possimus magnam nisi repudiandae tenetur. Voluptate
+              aliquid molestiae error impedit culpa.
+            </p>
+          </div>
+        </Grid>
+      </Section>
+      <Section>
+        <Heading>
+          <h2>Meet our photographers</h2>
+        </Heading>
+        <Grid sm={2} md={3} lg={4}>
+          {photographers.map((photographer) => (
+            <Card key={photographer.id}>
+              <CardMedia image={photographer.avatar}>
+                <CardMediaDescription>
+                  <h5>{photographer.name}</h5>
+                </CardMediaDescription>
+              </CardMedia>
+            </Card>
+          ))}
+        </Grid>
+      </Section>
+      <Footer />
+    </>
+  );
+};
 
 About.defaultProps = {};
 

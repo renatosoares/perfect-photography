@@ -3,8 +3,6 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import { FaIdCard, FaHome, FaScroll } from "react-icons/fa";
 
-import { useScrollToTop } from "hooks/scroll";
-
 import Hero from "components/molecules/Hero";
 import Heading from "components/atoms/Heading";
 import Section from "components/molecules/Section";
@@ -38,85 +36,81 @@ const PinnedItem = styled.li`
   }
 `;
 
-const ProductDetail = () => {
-  useScrollToTop();
-
-  return (
-    <>
-      <Hero image={BirdImage}>
-        <Heading>
-          <h1>Service name</h1>
-        </Heading>
-        <BreadCrumb
-          items={[
-            { label: "Home", link: "/" },
-            { label: "Services" },
-            { label: "Service name" },
-          ]}
-        />
-      </Hero>
-      <Section>
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis
-          dicta veniam, iure ipsum architecto ipsam facilis dolore provident
-          optio commodi, porro enim cum, recusandae nisi laboriosam esse
-          expedita nam cupiditate?
-        </p>
-        <p>
-          Eum deserunt magnam quidem tenetur quod! Dolorum itaque neque ut
-          consectetur, ipsum tempora ea odit quibusdam natus nulla accusamus
-          quo, aliquam asperiores qui id laborum? Voluptas totam exercitationem
-          esse voluptatum.
-        </p>
-        <p>
-          Repudiandae eum, beatae non earum dolores doloremque, fugit unde quos
-          consequuntur atque sequi eligendi distinctio nobis! Commodi, enim,
-          expedita, nulla similique sed aliquid maiores saepe nisi facilis odit
-          beatae repellendus.
-        </p>
-        <h5>Necessary documents:</h5>
-        <PinnedList>
-          <PinnedItem>
-            <FaIdCard />
-            Lorem ipsum
-          </PinnedItem>
-          <PinnedItem>
-            <FaIdCard />
-            Amet consectetur
-          </PinnedItem>
-          <PinnedItem>
-            <FaScroll />
-            Numquam dignissimos sequi
-          </PinnedItem>
-          <PinnedItem>
-            <FaHome />
-            perspiciatis porro
-          </PinnedItem>
-        </PinnedList>
-      </Section>
-      <Section inverse>
-        <Callout>
-          <CalloutBody>
-            <h6>Make your registration right now!</h6>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe
-              animi numquam dignissimos sequi ex accusantium magnam voluptatum
-              deserunt pariatur iusto cum delectus, enim unde cupiditate
-              perspiciatis porro amet, facere nemo.
-            </p>
-            <CalloutActions>
-              <Button color="primary">Matriculate</Button>
-            </CalloutActions>
-          </CalloutBody>
-          <CalloutMedia>
-            <TeachingImage />
-          </CalloutMedia>
-        </Callout>
-      </Section>
-      <Footer />
-    </>
-  );
-};
+const ProductDetail = () => (
+  <>
+    <Hero image={BirdImage}>
+      <Heading>
+        <h1>Service name</h1>
+      </Heading>
+      <BreadCrumb
+        items={[
+          { label: "Home", link: "/" },
+          { label: "Services" },
+          { label: "Service name" },
+        ]}
+      />
+    </Hero>
+    <Section>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis
+        dicta veniam, iure ipsum architecto ipsam facilis dolore provident optio
+        commodi, porro enim cum, recusandae nisi laboriosam esse expedita nam
+        cupiditate?
+      </p>
+      <p>
+        Eum deserunt magnam quidem tenetur quod! Dolorum itaque neque ut
+        consectetur, ipsum tempora ea odit quibusdam natus nulla accusamus quo,
+        aliquam asperiores qui id laborum? Voluptas totam exercitationem esse
+        voluptatum.
+      </p>
+      <p>
+        Repudiandae eum, beatae non earum dolores doloremque, fugit unde quos
+        consequuntur atque sequi eligendi distinctio nobis! Commodi, enim,
+        expedita, nulla similique sed aliquid maiores saepe nisi facilis odit
+        beatae repellendus.
+      </p>
+      <h5>Necessary documents:</h5>
+      <PinnedList>
+        <PinnedItem>
+          <FaIdCard />
+          Lorem ipsum
+        </PinnedItem>
+        <PinnedItem>
+          <FaIdCard />
+          Amet consectetur
+        </PinnedItem>
+        <PinnedItem>
+          <FaScroll />
+          Numquam dignissimos sequi
+        </PinnedItem>
+        <PinnedItem>
+          <FaHome />
+          perspiciatis porro
+        </PinnedItem>
+      </PinnedList>
+    </Section>
+    <Section inverse>
+      <Callout>
+        <CalloutBody>
+          <h6>Make your registration right now!</h6>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe
+            animi numquam dignissimos sequi ex accusantium magnam voluptatum
+            deserunt pariatur iusto cum delectus, enim unde cupiditate
+            perspiciatis porro amet, facere nemo.
+          </p>
+          <CalloutActions>
+            <Button color="primary">Matriculate</Button>
+          </CalloutActions>
+        </CalloutBody>
+        <CalloutMedia>
+          <TeachingImage />
+        </CalloutMedia>
+      </Callout>
+    </Section>
+    <Footer />
+  </>
+);
 
 ProductDetail.defaultProps = {};
 

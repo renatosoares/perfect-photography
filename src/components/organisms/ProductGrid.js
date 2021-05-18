@@ -34,7 +34,7 @@ const ProductGrid = ({ products }) => {
                     color="primary"
                     variant="link"
                     as={Link}
-                    to="/services"
+                    to={`/services/${product.slang}`}
                   >
                     Saiba mais
                   </Button>
@@ -71,6 +71,7 @@ ProductGrid.propTypes = {
       image: PropTypes.string,
       title: PropTypes.string,
       summary: PropTypes.string,
+      slang: PropTypes.string,
     })
   ),
 };

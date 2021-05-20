@@ -1,7 +1,7 @@
 import React from "react";
 
 import Home from "./Home";
-import { buildProductList } from "stories/builders/products";
+import { buildProductList } from "models/builders/products";
 
 export default {
   title: "Components/Pages/Home",

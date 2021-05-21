@@ -13,3 +13,5 @@ export const buildProductList = (size) => {
 
   return result;
 };
+
+export const buildProduct = () => buildProductList(1)[0];

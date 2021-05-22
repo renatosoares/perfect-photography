@@ -5,13 +5,21 @@ import styled from "styled-components";
 import Grid from "components/atoms/Grid";
 import Heading from "components/atoms/Heading";
 import Section from "components/molecules/Section";
+import Button from "components/atoms/Button";
+import { Link } from "react-router-dom";
 
 const ImageContainer = styled.div`
+  text-align: right;
+
   svg {
     width: 100%;
     height: auto;
-    max-width: 200px;
+    max-width: 400px;
   }
+`;
+
+const ErrorTitle = styled.h1`
+  margin-top: 0;
 `;
 
 const Error = ({ image, title, description }) => (
@@ -19,9 +27,14 @@ const Error = ({ image, title, description }) => (
     <Grid sm={2}>
       <div>
         <Heading>
-          <h1>{title}</h1>
+          <ErrorTitle>{title}</ErrorTitle>
         </Heading>
         <p>{description}</p>
+        <div>
+          <Button as={Link} to="/" color="primary">
+            Back to home page
+          </Button>
+        </div>
       </div>
       <div>
         <ImageContainer>{image}</ImageContainer>

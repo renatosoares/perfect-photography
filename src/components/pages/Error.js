@@ -15,7 +15,13 @@ const ImageContainer = styled.div`
     width: 100%;
     height: auto;
     max-width: 400px;
+    color: ${(props) => props.theme.colors.primary.main};
   }
+`;
+
+const ErrorMessage = styled.p`
+  margin: 24px 0;
+  font-size: 1.2rem;
 `;
 
 const ErrorTitle = styled.h1`
@@ -29,7 +35,7 @@ const Error = ({ image, title, description }) => (
         <Heading>
           <ErrorTitle>{title}</ErrorTitle>
         </Heading>
-        <p>{description}</p>
+        <ErrorMessage>{description}</ErrorMessage>
         <div>
           <Button as={Link} to="/" color="primary">
             Back to home page

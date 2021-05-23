@@ -1,5 +1,5 @@
 import React from "react";
-// import PropTypes from "prop-types";
+import PropTypes from "prop-types";
 import {
   FaChargingStation,
   FaCameraRetro,
@@ -7,6 +7,8 @@ import {
   FaUserClock,
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
+
+import ProductType from "models/types/ProductType";
 
 import Hero from "components/molecules/Hero";
 import Heading from "components/atoms/Heading";
@@ -19,47 +21,9 @@ import ProductGrid from "components/organisms/ProductGrid";
 import Accordion, { AccordionGroup } from "components/atoms/Accordion";
 
 import BirdImage from "assets/bg-bird.jpg";
-import ServImage01 from "assets/serv-01.jpg";
-import ServImage02 from "assets/serv-02.jpg";
-import ServImage03 from "assets/serv-03.jpg";
-import ServImage04 from "assets/serv-04.jpg";
-import ServImage05 from "assets/serv-05.jpg";
 import CameraVideo from "assets/camera.mp4";
 
-const products = [
-  {
-    id: 1,
-    title: "1ª photography old cars",
-    summary: "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
-    image: ServImage01,
-  },
-  {
-    id: 2,
-    title: "1ª photography news motorcycles",
-    summary: "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
-    image: ServImage02,
-  },
-  {
-    id: 3,
-    title: "1ª photography flowers",
-    summary: "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
-    image: ServImage03,
-  },
-  {
-    id: 4,
-    title: "Switch to professional equipment",
-    summary: "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
-    image: ServImage04,
-  },
-  {
-    id: 5,
-    title: "Studio environment",
-    summary: "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
-    image: ServImage05,
-  },
-];
-
-const Home = () => (
+const Home = ({ products }) => (
   <>
     <Hero image={BirdImage}>
       <Heading>
@@ -161,8 +125,12 @@ const Home = () => (
   </>
 );
 
-// Home.defaultProps = {};
+Home.defaultProps = {
+  products: [],
+};
 
-// Home.propTypes = {};
+Home.propTypes = {
+  products: PropTypes.arrayOf(ProductType),
+};
 
 export default Home;
